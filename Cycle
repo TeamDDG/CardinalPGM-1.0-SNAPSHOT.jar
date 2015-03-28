@@ -1,0 +1,53 @@
+[21:04:39] [Server thread/INFO]: Starting minecraft server version 1.8
+[21:04:39] [Server thread/INFO]: Loading properties
+[21:04:39] [Server thread/INFO]: Default game type: SURVIVAL
+[21:04:39] [Server thread/INFO]: Generating keypair
+[21:04:40] [Server thread/INFO]: Starting Minecraft server on *:25565
+[21:04:40] [Server thread/INFO]: This server is running SportBukkit version git-SportBukkit-3fd7c56 (MC: 1.8) (Implementing API version 1.8-R0.1-SNAPSHOT)
+[21:04:40] [Server thread/INFO]: [Tracker] Loading Tracker v0.1.0-SNAPSHOT
+[21:04:40] [Server thread/INFO]: [TrackerDeaths] Loading TrackerDeaths v2.0
+[21:04:40] [Server thread/INFO]: [WorldEdit] Loading WorldEdit v5.6.2
+[21:04:40] [Server thread/INFO]: [CardinalPGM] Loading Cardinal v1.0-SNAPSHOT-git-CardinalPGM-0be9577
+[21:04:40] [Server thread/INFO]: Preparing level "world"
+[21:04:40] [Server thread/INFO]: Preparing start region for level 0 (Seed: -3377386004138929216)
+[21:04:41] [Server thread/INFO]: Preparing start region for level 1 (Seed: -3377386004138929216)
+[21:04:41] [Server thread/INFO]: Preparing start region for level 2 (Seed: -3377386004138929216)
+[21:04:42] [Server thread/INFO]: [Tracker] Enabling Tracker v0.1.0-SNAPSHOT
+[21:04:42] [Server thread/INFO]: [TrackerDeaths] Enabling TrackerDeaths v2.0
+[21:04:42] [Server thread/INFO]: [WorldEdit] Enabling WorldEdit v5.6.2
+[21:04:42] [Server thread/INFO]: WEPIF: Using the Bukkit Permissions API.
+[21:04:42] [Server thread/INFO]: [CardinalPGM] Enabling Cardinal v1.0-SNAPSHOT-git-CardinalPGM-0be9577
+[21:04:42] [Server thread/INFO]: [CardinalPGM] Deleting match files, this can be disabled via the configuration
+[21:04:42] [Server thread/WARN]: File 'tutorial.xml' was not found nor included!
+[21:04:42] [Server thread/INFO]: Preparing start region for level 3 (Seed: 0)
+[21:04:43] [Server thread/INFO]: Preparing spawn area for matches/31e0c242-31bf-4607-b288-fd9a8e908158, 28%
+[21:04:44] [Server thread/INFO]: [CardinalPGM] 126 modules loaded.
+[21:04:44] [Server thread/INFO]: [0;36;22mCycled to [0;36;1mDeepwind Jungle[m
+[21:04:44] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[21:04:44] [Server thread/INFO]: Done (4,063s)! For help, type "help" or "?"
+[21:04:50] [Server thread/INFO]: §e§b§c?§bElandorr§e joined the game
+[21:04:50] [Server thread/INFO]: Elandorr[/127.0.0.1:53467] logged in with entity id 428 at ([matches/31e0c242-31bf-4607-b288-fd9a8e908158] -48,3, 59,0, -1,0)
+[21:04:56] [Server thread/WARN]: [WorldEdit] No compatible nms block class found.
+[21:05:01] [Server thread/INFO]: [0;32;1mMatch starting in [0;31;22m30[0;32;1m seconds[m
+[21:05:06] [Server thread/INFO]: [0;32;1mMatch starting in [0;31;22m25[0;32;1m seconds[m
+[21:05:06] [Server thread/INFO]: [0;32;1mThe match has started![m
+[21:05:06] [Server thread/INFO]: [0;35;22m# # # # # # # # # # # # # # # #[m
+[21:05:06] [Server thread/INFO]: [0;35;22m# # [0;33;22mThe match has started![0;35;22m # #[m
+[21:05:06] [Server thread/INFO]: [0;35;22m# # # # # # # # # # # # # # # #[m
+[21:05:06] [Server thread/INFO]: [0;36;1mTime Elapsed: [0;32;1m00:00[m
+[21:06:57] [Server thread/INFO]: Elandorr issued server command: /snowflakes
+[21:07:57] [Server thread/INFO]: [0;37;1m[0;34;1mElandorr[0;37;1m placed [0;32;22mGREEN WOOL[0;37;1m for the [0;34;1mBlue Team[0;37;1m[m
+[21:07:58] [Server thread/INFO]: [0;37;1m[0;34;1mElandorr[0;37;1m placed [0;36;22mCYAN WOOL[0;37;1m for the [0;34;1mBlue Team[0;37;1m[m
+[21:07:58] [Server thread/INFO]: [0;35;22m# # # # # # # # # # # #[m
+[21:07:58] [Server thread/INFO]: [0;35;22m# #    [0;33;22mGame over![0;35;22m    # #[m
+[21:07:58] [Server thread/INFO]: [0;35;22m# # [0;34;1mElandorr wins![0;35;22m # #[m
+[21:07:58] [Server thread/INFO]: [0;35;22m# # # # # # # # # # # #[m
+[21:08:10] [Server thread/INFO]: Elandorr issued server command: /g gg
+[21:08:10] [Server thread/INFO]: <[0;34;1m[0;31;1m?[0;34;1mElandorr[m>: gg[m
+[21:08:13] [Netty Server IO #2/INFO]: §9[Blue Team] §c?§9Elandorr§r: gg
+[21:08:21] [Server thread/INFO]: Elandorr issued server command: /A gg
+[21:08:21] [Server thread/INFO]: [§6A§f] §9§c?§9Elandorr§r:gg
+[21:08:23] [Netty Server IO #2/INFO]: §9[Blue Team] §c?§9Elandorr§r: t
+[21:08:24] [Server thread/INFO]: Elandorr issued server command: /a
+[21:08:26] [Netty Server IO #2/INFO]: [§6A§f] §9§c?§9Elandorr§r:t
+[21:08:27] [Server thread/INFO]: Elandorr issued server command: /g
