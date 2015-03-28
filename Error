@@ -1,0 +1,97 @@
+---- Minecraft Crash Report ----
+// Ouch. That hurt :(
+
+Time: 24-3-15 23:12
+Description: Ticking entity
+
+java.lang.AssertionError: Unhandled damage of EntityItem['item.tile.obsidian'/83790, l='matches/666db2dd-a04b-41ff-861f-ce7988b61450', x=-55,68, y=41,65, z=71,60] from lava
+	at org.bukkit.craftbukkit.v1_8_R1.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:508)
+	at org.bukkit.craftbukkit.v1_8_R1.event.CraftEventFactory.handleNonLivingEntityDamageEvent(CraftEventFactory.java:570)
+	at org.bukkit.craftbukkit.v1_8_R1.event.CraftEventFactory.handleNonLivingEntityDamageEvent(CraftEventFactory.java:556)
+	at net.minecraft.server.v1_8_R1.EntityItem.damageEntity(EntityItem.java:206)
+	at net.minecraft.server.v1_8_R1.Entity.burnFromLava(Entity.java:336)
+	at net.minecraft.server.v1_8_R1.Entity.K(Entity.java:309)
+	at net.minecraft.server.v1_8_R1.Entity.s_(Entity.java:234)
+	at net.minecraft.server.v1_8_R1.EntityItem.s_(EntityItem.java:62)
+	at net.minecraft.server.v1_8_R1.World.entityJoinedWorld(World.java:1374)
+	at net.minecraft.server.v1_8_R1.World.g(World.java:1352)
+	at net.minecraft.server.v1_8_R1.World.tickEntities(World.java:1222)
+	at net.minecraft.server.v1_8_R1.WorldServer.tickEntities(WorldServer.java:539)
+	at net.minecraft.server.v1_8_R1.MinecraftServer.z(MinecraftServer.java:713)
+	at net.minecraft.server.v1_8_R1.DedicatedServer.z(DedicatedServer.java:284)
+	at net.minecraft.server.v1_8_R1.MinecraftServer.y(MinecraftServer.java:611)
+	at net.minecraft.server.v1_8_R1.MinecraftServer.run(MinecraftServer.java:521)
+	at java.lang.Thread.run(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at org.bukkit.craftbukkit.v1_8_R1.event.CraftEventFactory.handleEntityDamageEvent(CraftEventFactory.java:508)
+	at org.bukkit.craftbukkit.v1_8_R1.event.CraftEventFactory.handleNonLivingEntityDamageEvent(CraftEventFactory.java:570)
+	at org.bukkit.craftbukkit.v1_8_R1.event.CraftEventFactory.handleNonLivingEntityDamageEvent(CraftEventFactory.java:556)
+	at net.minecraft.server.v1_8_R1.EntityItem.damageEntity(EntityItem.java:206)
+	at net.minecraft.server.v1_8_R1.Entity.burnFromLava(Entity.java:336)
+	at net.minecraft.server.v1_8_R1.Entity.K(Entity.java:309)
+	at net.minecraft.server.v1_8_R1.Entity.s_(Entity.java:234)
+	at net.minecraft.server.v1_8_R1.EntityItem.s_(EntityItem.java:62)
+	at net.minecraft.server.v1_8_R1.World.entityJoinedWorld(World.java:1374)
+	at net.minecraft.server.v1_8_R1.World.g(World.java:1352)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Item (net.minecraft.server.v1_8_R1.EntityItem)
+	Entity ID: 83790
+	Entity Name: item.tile.obsidian
+	Entity's Exact location: -55,68, 41,65, 71,60
+	Entity's Block location: -56,00,41,00,71,00 - World: (-56,41,71), Chunk: (at 8,2,7 in -4,4; contains blocks -64,0,64 to -49,255,79), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Entity's Momentum: 0,05, 0,20, -0,06
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.server.v1_8_R1.World.tickEntities(World.java:1222)
+	at net.minecraft.server.v1_8_R1.WorldServer.tickEntities(WorldServer.java:539)
+
+-- Affected level --
+Details:
+	Level name: matches/666db2dd-a04b-41ff-861f-ce7988b61450
+	All players: 2 total; [EntityPlayer['Elandorr'/1420, l='matches/666db2dd-a04b-41ff-861f-ce7988b61450', x=-54,90, y=42,00, z=68,81](Elandorr at -54.90054435044492,42.0,68.81148101788695), EntityPlayer['Eldrin'/1432, l='matches/666db2dd-a04b-41ff-861f-ce7988b61450', x=-85,26, y=25,00, z=71,02](Eldrin at -85.26300810420484,25.0,71.0169840610468)]
+	Chunk stats: ServerChunkCache: 557 Drop: 0
+	Level seed: -4917532032081844498
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: 16,00,34,00,-18,00 - World: (16,34,-18), Chunk: (at 0,2,14 in 1,-2; contains blocks 16,0,-32 to 31,255,-17), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 2922382 game time, 2978140 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 125407 (now: false), thunder time: 11445 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.v1_8_R1.MinecraftServer.z(MinecraftServer.java:713)
+	at net.minecraft.server.v1_8_R1.DedicatedServer.z(DedicatedServer.java:284)
+	at net.minecraft.server.v1_8_R1.MinecraftServer.y(MinecraftServer.java:611)
+	at net.minecraft.server.v1_8_R1.MinecraftServer.run(MinecraftServer.java:521)
+	at java.lang.Thread.run(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 7 (amd64) version 6.1
+	Java Version: 1.8.0_40, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 627073128 bytes (598 MB) / 1034944512 bytes (987 MB) up to 1034944512 bytes (987 MB)
+	JVM Flags: 2 total; -Xmx1G -Xms1G
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	CraftBukkit Information: 
+   Running: SportBukkit version git-SportBukkit-3fd7c56 (MC: 1.8) (Implementing API version 1.8-R0.1-SNAPSHOT) true
+   Plugins: { Cardinal v1.0-SNAPSHOT-git-CardinalPGM-0be9577 in.twizmwaz.cardinal.Cardinal [twiz_mwazin],}
+   Warnings: DEFAULT
+   Reload Count: 0
+   Threads: { RUNNABLE Netty Server IO #1: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306), io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116), java.lang.Thread.run(Unknown Source)], RUNNABLE Netty Server IO #5: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306), io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116), java.lang.Thread.run(Unknown Source)], WAITING Chunk I/O Executor Thread-1: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.park(Unknown Source), java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source), java.util.concurrent.LinkedBlockingQueue.take(Unknown Source), java.util.concurrent.ThreadPoolExecutor.getTask(Unknown Source), java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source), java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source), java.lang.Thread.run(Unknown Source)], RUNNABLE Server console handler: [org.fusesource.jansi.internal.Kernel32.ReadConsoleInputW(Native Method), org.fusesource.jansi.internal.Kernel32.readConsoleInputHelper(Kernel32.java:761), org.fusesource.jansi.internal.Kernel32.readConsoleKeyInput(Kernel32.java:794), org.fusesource.jansi.internal.WindowsSupport.readConsoleInput(WindowsSupport.java:97), org.bukkit.craftbukkit.libs.jline.WindowsTerminal.readConsoleInput(WindowsTerminal.java:215), org.bukkit.craftbukkit.libs.jline.WindowsTerminal.access$000(WindowsTerminal.java:55), org.bukkit.craftbukkit.libs.jline.WindowsTerminal$1.read(WindowsTerminal.java:157), org.bukkit.craftbukkit.libs.jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:169), org.bukkit.craftbukkit.libs.jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:137), org.bukkit.craftbukkit.libs.jline.internal.NonBlockingInputStream.read(NonBlockingInputStream.java:246), org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader.read(InputStreamReader.java:261), org.bukkit.craftbukkit.libs.jline.internal.InputStreamReader.read(InputStreamReader.java:198), org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readCharacter(ConsoleReader.java:2145), org.bukkit.craftbukkit.libs.jline.console.ConsoleReader.readLine(ConsoleReader.java:2349), net.minecraft.server.v1_8_R1.ThreadCommandReader.run(ThreadCommandReader.java:33)], RUNNABLE Attach Listener: [], WAITING Finalizer: [java.lang.Object.wait(Native Method), java.lang.ref.ReferenceQueue.remove(Unknown Source), java.lang.ref.ReferenceQueue.remove(Unknown Source), java.lang.ref.Finalizer$FinalizerThread.run(Unknown Source)], WAITING NonBlockingInputStreamThread: [java.lang.Object.wait(Native Method), org.bukkit.craftbukkit.libs.jline.internal.NonBlockingInputStream.run(NonBlockingInputStream.java:278), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Server Watchdog: [java.lang.Thread.sleep(Native Method), net.minecraft.server.v1_8_R1.ThreadWatchdog.run(SourceFile:73), java.lang.Thread.run(Unknown Source)], RUNNABLE Signal Dispatcher: [], RUNNABLE Netty Server IO #3: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306), io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116), java.lang.Thread.run(Unknown Source)], RUNNABLE DestroyJavaVM: [], WAITING Reference Handler: [java.lang.Object.wait(Native Method), java.lang.Object.wait(Unknown Source), java.lang.ref.Reference$ReferenceHandler.run(Unknown Source)], RUNNABLE Server thread: [java.lang.Thread.dumpThreads(Native Method), java.lang.Thread.getAllStackTraces(Unknown Source), org.bukkit.craftbukkit.v1_8_R1.CraftCrashReport.call(CraftCrashReport.java:29), net.minecraft.server.v1_8_R1.CrashReportSystemDetails.a(SourceFile:78), net.minecraft.server.v1_8_R1.CrashReport.h(CrashReport.java:43), net.minecraft.server.v1_8_R1.CrashReport.<init>(CrashReport.java:32), net.minecraft.server.v1_8_R1.CrashReport.a(CrashReport.java:228), net.minecraft.server.v1_8_R1.World.tickEntities(World.java:1224), net.minecraft.server.v1_8_R1.WorldServer.tickEntities(WorldServer.java:539), net.minecraft.server.v1_8_R1.MinecraftServer.z(MinecraftServer.java:713), net.minecraft.server.v1_8_R1.DedicatedServer.z(DedicatedServer.java:284), net.minecraft.server.v1_8_R1.MinecraftServer.y(MinecraftServer.java:611), net.minecraft.server.v1_8_R1.MinecraftServer.run(MinecraftServer.java:521), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Server Infinisleeper: [java.lang.Thread.sleep(Native Method), net.minecraft.server.v1_8_R1.ThreadSleepForever.run(SourceFile:64)], RUNNABLE Netty Server IO #6: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306), io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116), java.lang.Thread.run(Unknown Source)], RUNNABLE Netty Server IO #2: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306), io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116), java.lang.Thread.run(Unknown Source)], RUNNABLE Netty Server IO #4: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306), io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116), java.lang.Thread.run(Unknown Source)], TIMED_WAITING File IO Thread: [java.lang.Thread.sleep(Native Method), net.minecraft.server.v1_8_R1.FileIOThread.c(SourceFile:51), net.minecraft.server.v1_8_R1.FileIOThread.run(SourceFile:30), java.lang.Thread.run(Unknown Source)], WAITING Thread-5: [sun.misc.Unsafe.park(Native Method), java.util.concurrent.locks.LockSupport.park(Unknown Source), java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(Unknown Source), java.util.concurrent.LinkedBlockingQueue.take(Unknown Source), com.mojang.util.QueueLogAppender.getNextLogEvent(QueueLogAppender.java:77), org.bukkit.craftbukkit.v1_8_R1.util.TerminalConsoleWriterThread.run(TerminalConsoleWriterThread.java:25), java.lang.Thread.run(Unknown Source)], TIMED_WAITING Snooper Timer: [java.lang.Object.wait(Native Method), java.util.TimerThread.mainLoop(Unknown Source), java.util.TimerThread.run(Unknown Source)], RUNNABLE Netty Server IO #0: [sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method), sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(Unknown Source), sun.nio.ch.WindowsSelectorImpl$SubSelector.access$400(Unknown Source), sun.nio.ch.WindowsSelectorImpl.doSelect(Unknown Source), sun.nio.ch.SelectorImpl.lockAndDoSelect(Unknown Source), sun.nio.ch.SelectorImpl.select(Unknown Source), io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:618), io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:306), io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:116), java.lang.Thread.run(Unknown Source)],}
+   Recent tasks from 19151-19181{}
+	Profiler Position: N/A (disabled)
+	Player Count: 2 / 20; [EntityPlayer['Elandorr'/1420, l='matches/666db2dd-a04b-41ff-861f-ce7988b61450', x=-54,90, y=42,00, z=68,81](Elandorr at -54.90054435044492,42.0,68.81148101788695), EntityPlayer['Eldrin'/1432, l='matches/666db2dd-a04b-41ff-861f-ce7988b61450', x=-85,26, y=25,00, z=71,02](Eldrin at -85.26300810420484,25.0,71.0169840610468)]
+	Is Modded: Definitely; Server brand changed to 'SportBukkit'
+	Type: Dedicated Server (map_server.txt)
