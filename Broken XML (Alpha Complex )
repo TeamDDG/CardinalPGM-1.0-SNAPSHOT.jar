@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<map proto="1.3.0">
+<name>Alpha Complex</name>
+<version>1.2</version>
+<objective>Break the obsidian from the enemy team's monument.</objective>
+<authors>
+    <author>Elthanorr</author>
+</authors>
+<contributors>
+    <contributor contribution="Map Feedback and XML Coding">Elthanorr</contributor>
+</contributors>
+<rules>
+   <rule>Don't spawn kill!</rule>
+   <rule>Don't block the spawns!</rule>
+</rules>
+<teams>
+    <team color="blue" max="20">Omega</team>
+    <team color="dark red" max="20">Alpha</team>
+</teams>
+<maxbuildheight>256</maxbuildheight>
+<spawns>
+    <spawn team="Alpha" kit="red" yaw="-45"><cuboid min="0.5,106,209.5" max="0.5,106,209.5"/></spawn>
+    <spawn team="Omega" kit="blue" yaw="-135"><cuboid min="0.5,106,0.5" max="0.5,106,0.5"/></spawn>
+    <default yaw="-90"><cuboid min="108.5,164,106.5" max="108.5,164,106.5"/></default>
+</spawns>
+<destroyables completion="100%">
+        <destroyable name="Left" owner="Alpha" materials="obsidian">
+            <cuboid min="34,109,243" max="34,109,243"/>
+        </destroyable>
+        <destroyable name="Right" owner="Alpha" materials="obsidian">
+            <cuboid min="-34,109,243" max="-34,109,243"/>
+        </destroyable>
+        <destroyable name="Left" owner="Omega" materials="obsidian">
+            <cuboid min="-34,109,-34" max="-34,109,-34"/>
+        </destroyable>
+        <destroyable name="Right" owner="Omega" materials="obsidian">
+            <cuboid min="34,109,-34" max="34,109,-34"/>
+        </destroyable>
+    </destroyables>
+
+<kits>
+    <kit name="spawn">
+        <item slot="0">iron sword</item>
+        <item slot="1" enchantment="arrow infinite:1">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3" amount="3">golden apple</item>
+        <item slot="4" amount="32">log</item>
+        <item slot="5" amount="64">glass</item>
+        <item slot="6" amount="8">cooked fish</item>
+		<item slot="27" amount="1">arrow</item>
+	    <potion duration="5" amplifier="1">heal</potion>
+    </kit>
+    <kit name="red" parents="spawn">
+        <helmet color="cd0000">leather helmet</helmet>
+        <chestplate color="cd0000">leather chestplate</chestplate>
+        <leggings color="cd0000">leather leggings</leggings>
+        <boots color="cd0000">leather boots</boots>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="FFF700">leather helmet</helmet>
+        <chestplate color="FFF700">leather chestplate</chestplate>
+        <leggings color="FFF700">leather leggings</leggings>
+        <boots color="FFF700">leather boots</boots>
+    </kit>
+</kits>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>bow</tool>
+</toolrepair>
+<itemremove>
+    <item>arrow</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>wood</item>
+    <item>apple</item>
+    <item>obsidian</item>
+</itemremove>
+<tnt>
+    <instantignite>on</instantignite>
+    <blockdamage>off</blockdamage>
+</tnt>
+</map>
